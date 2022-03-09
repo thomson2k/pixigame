@@ -1,8 +1,8 @@
 import React from 'react';
 import { Scenes } from '../App';
 
-export default function start( props: Scenes ) {
-  const handleChange = (event: Scenes) => {
+export default function start( props: any ) {
+  const handleChange = () => {
     props.changeScene(Scenes.GAME);
   }
   return (

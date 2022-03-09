@@ -1,7 +1,7 @@
 import React from 'react'
 import { Scenes} from '../App';
 
-export default function lost(props: Scenes) {
+export default function lost(props: any) {
   const handleChange = () => {
     props.changeScene(Scenes.START);
   }
