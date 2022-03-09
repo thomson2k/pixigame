@@ -6,6 +6,7 @@ import Lost from './scenes/lost';
 import Start from './scenes/start';
 import Win from './scenes/win';
 
+// eslint-disable-next-line no-unused-vars
 export enum Scenes { START, GAME, LOST, WIN }
 export interface IProps {
   scene: Scenes;
@@ -16,19 +17,20 @@ function App() {
 
   const onChangeScene = (scene: Scenes) => {
     setCurrentScene(scene);
-  }
+  };
+
   const getScene = (scene: Scenes) => {
     switch (scene) {
       case Scenes.START:
         return <Start changeScene={onChangeScene} />;
       case Scenes.GAME:
-        return <Game />;
+        return <Game changeScene={onChangeScene} />;
       case Scenes.LOST:
         return <Lost changeScene={onChangeScene} />;
       case Scenes.WIN:
         return <Win changeScene={onChangeScene} />;
       default:
-        return <Win />;
+        return <Start changeScene={onChangeScene} />;
     }
   };
   return (
@@ -40,7 +42,9 @@ function App() {
         { getScene(currentScene) }
       </main>
       <footer>
-        <p>STOPKA GAME</p>
+        <div className="footer__wrapper">
+          <p>GHOSTGAME</p>
+        </div>
       </footer>
     </div>
   );

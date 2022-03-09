@@ -3,7 +3,7 @@ import { Scenes } from '../App';
 
 export default function win(props:any) {
   const handleChange = () => {
-    props.changeScene(Scenes.GAME);
+    props.changeScene(Scenes.START);
   };
   return (
     <div className="card">
