@@ -32,7 +32,8 @@
               "ts": "never",
               "tsx": "never"
             }
-         ]
+         ],
+         "linebreak-style": 0
     },
     "settings": {
         "import/resolver": {
@@ -40,5 +41,7 @@
             "extensions": [".js", ".jsx", ".ts", ".tsx"]
           }
         }
-    }
+    },
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"]
 }
